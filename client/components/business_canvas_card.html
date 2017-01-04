@@ -1,0 +1,789 @@
+<template name="business_canvas_card">
+    
+<div class=" uk-text-center uk-margin-left uk-margin-right">
+    
+    
+    <!-- TOOL TIP SECTION --> 
+    
+    <div class="uk-alert uk-alert-success" data-uk-alert>
+            <a href="" class="uk-alert-close uk-close"></a>
+     
+        <p><i class="fa fa-life-ring" aria-hidden="true"> </i>
+            <b> TIP: </b>
+To indicate a message containing information for first time users. <br>Ex. After you have created pins, you can rearrange them accordingly by click on the pins' <b>
+            <i class="fa fa-arrows" aria-hidden="true"></i></b> icon ! </p>
+</div>
+    
+  <br><br>
+    
+    
+     <!-- BREADCRUMB SECTION --> 
+        <div class="uk-width-1-2">
+        <div class="uk-panel">
+         <!-- SECTION PANEL HEADER -->      
+            <h3 class="uk-panel-title uk-text-bold uk-text-large">BUSINESS CANVAS MODEL</h3>
+        </div> 
+        </div>
+    
+
+
+        <!-- SECTION SETTINGS/SHARE BUTTONS --> 
+   <div class="uk-align-right" data-uk-sticky="{bottom:100}">
+       
+       <button class="uk-button uk-icon-print" type="button">
+        </button>
+       <button class="uk-button uk-icon-file-pdf-o" type="button">
+        </button>
+       <button class="uk-button uk-icon-share-alt" type="button">
+        </button>
+    
+    </div>  
+    
+    
+    
+    <hr> 
+    <br>
+    <br>
+
+    <!-- MODEL SECTION --> 
+    {{>business_canvas_page}}
+    
+    </div>
+
+
+</template>
+
+
+
+<template name="business_canvas_page">
+    
+    <div class="uk-responsive-width uk-text-center uk-container-center">
+        
+        
+    <!-- MODALS --> 
+    
+    <div id="create-businesscanvas-partner" class="uk-modal">
+    <div class="uk-modal-dialog">
+        
+        <div class="uk-modal-header">
+         <a class="uk-modal-close uk-close uk-align-right"></a>   
+        </div>
+        
+        <div class="uk-modal-content">
+        <form class="uk-form">
+        <fieldset data-uk-margin>
+        <legend>Create a New Infastructure - Partner Pin</legend>
+        
+            <textarea cols="" rows="" placeholder="Description of Pin" name="infastructure-partner" ></textarea>
+    
+            
+       <div class="uk-modal-footer uk-button-group uk-align-right uk-vertical-align-bottom">
+           <button class="uk-button uk-modal-close" type="button">Cancel</button> 
+           <button class="uk-button uk-modal-close uk-button-success create-infastructure-partner" type="submit">Create</button>
+       </div>      
+       </fieldset>
+       </form>        
+       </div>
+        <br>
+        <br>
+    </div>
+    </div>
+        
+        
+    
+    <div id="create-businesscanvas-activity" class="uk-modal">
+    <div class="uk-modal-dialog">
+        
+        <div class="uk-modal-header">
+         <a class="uk-modal-close uk-close uk-align-right"></a>   
+        </div>
+        
+        <div class="uk-modal-content">
+        <form class="uk-form">
+        <fieldset data-uk-margin>
+        <legend>Create a New Infastructure - Activity Pin</legend>
+        
+             <textarea cols="" rows="" placeholder="Description of Pin" name="infastructure-activity" ></textarea>
+            
+        <div class="uk-modal-footer uk-button-group uk-align-right uk-vertical-align-bottom">
+            <button class="uk-button uk-modal-close" type="button">Cancel</button> 
+            <button class="uk-button uk-modal-close uk-button-success create-infastructure-activity" type="submit">Create</button>
+        </div>      
+        </fieldset>
+        </form>
+        </div>
+        
+        <br>
+        <br>
+      </div>
+      </div>
+  
+        
+        
+    <div id="create-businesscanvas-resource" class="uk-modal">
+    <div class="uk-modal-dialog">
+        
+        <div class="uk-modal-header">
+         <a class="uk-modal-close uk-close uk-align-right"></a>   
+        </div>
+        
+        <div class="uk-modal-content">
+        <form class="uk-form">
+        <fieldset data-uk-margin>
+        <legend>Create a New Infastructure - Resource Pin</legend>
+        
+             <textarea cols="" rows="" placeholder="Description of Pin" name="infastructure-resource" ></textarea>
+            
+        <div class="uk-modal-footer uk-button-group uk-align-right uk-vertical-align-bottom">
+            <button class="uk-button uk-modal-close" type="button">Cancel</button> 
+            <button class="uk-button uk-modal-close uk-button-success create-infastructure-resource" type="submit">Create</button>
+        </div>      
+        </fieldset>
+        </form>
+        </div>
+                
+        <br>
+        <br>
+     </div>
+     </div>
+    
+    <div id="create-businesscanvas-value" class="uk-modal">
+    <div class="uk-modal-dialog">
+        
+        <div class="uk-modal-header">
+         <a class="uk-modal-close uk-close uk-align-right"></a>   
+        </div>
+        
+        <div class="uk-modal-content">
+        <form class="uk-form">
+        <fieldset data-uk-margin>
+        <legend>Create a New Offering - Value Proposition Pin</legend>
+           
+                    <label>Summary Identifer </label> <br>
+                     <textarea cols="" rows="" placeholder="Pin Description" name="offering-valueproposition" ></textarea>   
+                   
+            <br><br>
+              
+                    
+            
+        <div class="uk-modal-footer uk-button-group uk-align-right uk-vertical-align-bottom">
+            <button class="uk-button uk-modal-close" type="button">Cancel</button> 
+            <button class="uk-button uk-modal-close uk-button-success create-offering-valueproposition" type="submit">Create</button>
+        </div>      
+        </fieldset>
+        </form>
+        </div>
+                
+        <br>
+        <br>
+    </div>
+    </div>
+    
+    <div id="create-businesscanvas-channel" class="uk-modal">
+    <div class="uk-modal-dialog">
+        
+        <div class="uk-modal-header">
+         <a class="uk-modal-close uk-close uk-align-right"></a>   
+        </div>
+        
+        <div class="uk-modal-content">
+        <form class="uk-form">
+        <fieldset data-uk-margin>
+        <legend>Create a New Customer - Channel Pin</legend>
+       
+             <textarea cols="" rows="" placeholder="Description of Pin" name="customer-channel" ></textarea>
+            
+        <div class="uk-modal-footer uk-button-group uk-align-right uk-vertical-align-bottom">
+            <button class="uk-button uk-modal-close" type="button">Cancel</button> 
+            <button class="uk-button uk-modal-close uk-button-success create-customer-channel" type="submit">Create</button>
+        </div>      
+        </fieldset>
+        </form>
+        </div>
+                
+        <br>
+        <br>
+    </div>
+    </div>
+    
+    <div id="create-businesscanvas-segement" class="uk-modal">
+    <div class="uk-modal-dialog">
+        
+        <div class="uk-modal-header">
+         <a class="uk-modal-close uk-close uk-align-right"></a>   
+        </div>
+        
+        <div class="uk-modal-content">
+        <form class="uk-form">
+        <fieldset data-uk-margin>
+        <legend>Create a New Customer - Segment Pin</legend>
+                
+             <textarea cols="" rows="" placeholder="Description of Pin" name="customer-segment" ></textarea>
+         
+        <div class="uk-modal-footer uk-button-group uk-align-right uk-vertical-align-bottom">
+            <button class="uk-button uk-modal-close" type="button">Cancel</button> 
+            <button class="uk-button uk-modal-close uk-button-success create-customer-segment" type="submit">Create</button>
+        </div>      
+        </fieldset>
+        </form>
+        </div>
+                
+        <br>
+        <br>
+    </div>
+    </div>
+    
+    <div id="create-businesscanvas-relationship" class="uk-modal">
+    <div class="uk-modal-dialog">
+        
+        <div class="uk-modal-header">
+        <a class="uk-modal-close uk-close uk-align-right"></a>   
+        </div>
+        
+        <div class="uk-modal-content">
+        <form class="uk-form">
+        <fieldset data-uk-margin>
+        <legend>Create a New Customer - Relationship Pin</legend>
+                
+             <textarea cols="" rows="" placeholder="Description of Pin" name="customer-relationship" ></textarea>
+                 
+        <div class="uk-modal-footer uk-button-group uk-align-right uk-vertical-align-bottom">
+            <button class="uk-button uk-modal-close" type="button">Cancel</button> 
+            <button class="uk-button uk-modal-close uk-button-success create-customer-relationship" type="submit">Create</button>
+        </div>      
+        </fieldset>
+        </form>
+        </div>
+                
+        <br>
+        <br>
+    </div>
+    </div>
+    
+    <div id="create-businesscanvas-stream" class="uk-modal">
+    <div class="uk-modal-dialog">
+        
+        <div class="uk-modal-header">
+         <a class="uk-modal-close uk-close uk-align-right"></a>
+        </div>
+        
+        <div class="uk-modal-content">
+        <form class="uk-form">
+        <fieldset data-uk-margin>
+        <legend>Create a New Financial - Revenue Stream Pin</legend>
+      
+            <textarea cols="" rows="" placeholder="Description of Pin" name="financial-revenuestream" ></textarea>
+            
+        <div class="uk-modal-footer uk-button-group uk-align-right uk-vertical-align-bottom">
+            <button class="uk-button uk-modal-close" type="button">Cancel</button> 
+            <button class="uk-button uk-modal-close uk-button-success create-financial-revenuestream" type="submit">Create</button>
+        </div>      
+        </fieldset>
+        </form>
+        </div>
+                
+        <br>
+        <br>
+    </div>
+    </div>
+    
+    <div id="create-businesscanvas-fsegement" class="uk-modal">
+    <div class="uk-modal-dialog">
+        
+        <div class="uk-modal-header">
+         <a class="uk-modal-close uk-close uk-align-right"></a>
+        </div>
+        
+        <div class="uk-modal-content">
+        <form class="uk-form">
+        <fieldset data-uk-margin>
+        <legend>Create a New Financial - Segement Pin</legend>
+                    
+            <textarea cols="" rows="" placeholder="Description of Pin" name="financial-segement" ></textarea>
+                    
+        <div class="uk-modal-footer uk-button-group uk-align-right uk-vertical-align-bottom">
+            <button class="uk-button uk-modal-close" type="button">Cancel</button> 
+            <button class="uk-button uk-modal-close uk-button-success create-financial-segement" type="submit">Create</button>
+        </div>      
+        </fieldset>
+        </form>
+        </div>
+                
+        <br>
+        <br>
+    </div>
+    </div>
+    
+    
+    
+    
+    <!-- CANVAS PANELS --> 
+
+<div class="uk-grid uk-grid-match" data-uk-grid-match="{target:'.uk-panel'}" >
+    
+<div class="uk-width-1-1">
+        
+<br>
+        
+<div class="uk-width-1-3 uk-width-small-1-1 uk-width-medium-1-3 uk-width-large-1-3" style="background-color:#749C8C;min-height:500px;">   
+    <h4 class="uk-text-contrast uk-text-center uk-margin-top uk-text-bold">INFASTRUCTURE 
+        <a href="" style="color:#FFBF00;" data-uk-tooltip title="The foundation and framework solutions of your business model.">
+            <i class="fa fa-info-circle"  aria-hidden="true"></i>
+        </a>
+    </h4>
+    <hr>
+               
+        <div class="uk-grid uk-grid-small">
+        
+        <div class="uk-width-1-3 uk-width-small-1-1 uk-width-medium-1-3 uk-width-large-1-3">
+        <div class="uk-panel uk-panel-hover ">
+            
+        <h6 class="uk-panel-header uk-text-bottom">PARTNER 
+            <a href="" style="color:#FFBF00;" data-uk-tooltip title="Who are our key partners ? <br> Who are our key suppliers ? <br> What key resources are being acquired ? How ? <br> Which key activities do partners perform ? <br> <b> Motivations for partnerships: </b> - Optimization and Economy <br> - Reduction of risk and obstacles <br> - Acquisition and procurement of resources and activities">
+                <i class="fa fa-info-circle" aria-hidden="true"></i>
+            </a>
+        </h6>
+        <hr> 
+            
+            <p>
+                <button class="uk-button uk-icon-plus uk-button-primary" style="color:#f5f5f5;" data-uk-modal="{target:'#create-businesscanvas-partner', center:true}"> 
+                    <i class="fa fa-sticky-note" aria-hidden="true"></i>
+                </button>
+            </p> 
+            
+            
+           
+        <ul class="uk-list uk-list-space uk-sortable" style="list-style-type: none;background:#c3d5ce;"  data-uk-sortable="{handleClass:'uk-sortable-handle', group:'list-sorting'}">
+           
+           
+           
+              {{#each key_partner}}
+            
+            <li class="uk-width-1-1" style="font-size: 12px;background:#ffe699;">
+            <div class="uk-panel">
+            
+            <p class="uk-panel-title uk-width-1-1 uk-sortable-handle" style="font-size: 12px;"><i class="uk-icon-arrows" ></i></p>
+                       {{pin}}
+                <br><br>
+<button href="#" class="delete-pin-kp uk-button-danger uk-button-small uk-width-1-1 uk-icon-trash" style="color:#f5f5f5;">      
+            </button> 
+                
+            </div>
+            </li>
+            
+               {{/each}}
+            
+            
+            
+        </ul>
+           
+            </div>
+            </div>
+            
+            
+            
+        <div class="uk-width-1-3 uk-width-small-1-1 uk-width-medium-1-3 uk-width-large-1-3">
+        <div class="uk-panel uk-panel-hover ">
+        
+        <h6 class="uk-panel-header uk-text-bottom">ACTIVITY 
+            <a href="" style="color:#FFBF00;" data-uk-tooltip title="What key activities do our value propositions require ? <br> Our distribution channels ? <br> Customer relationships ? <br> Revenue Streams ? <br> <b> Categories </b> - Production <br> - Problem Solving <br> - Platform/Network ">
+                <i class="fa fa-info-circle" aria-hidden="true"></i>
+            </a>
+            </h6>
+        <hr>
+        
+        <p>
+            <button class="uk-button uk-icon-plus uk-button-primary" style="color:#f5f5f5;" data-uk-modal="{target:'#create-businesscanvas-activity', center:true}"> 
+                <i class="fa fa-sticky-note" aria-hidden="true"></i>
+            </button>
+        </p> 
+                    
+           
+        <ul class="uk-list uk-list-space uk-sortable" style="list-style-type: none;background:#c3d5ce;"  data-uk-sortable="{handleClass:'uk-sortable-handle', group:'list-sorting'}">
+           
+           
+           
+              {{#each key_activities}}
+            
+            <li class="uk-width-1-1" style="font-size: 12px;background:#ffe699;">
+            <div class="uk-panel">
+            
+            <p class="uk-panel-title uk-width-1-1 uk-sortable-handle" style="font-size: 12px;"><i class="uk-icon-arrows" ></i></p>
+                       {{pin}}
+                <br><br>
+<button href="#" class="delete-pin-ka uk-button-danger uk-button-small uk-width-1-1 uk-icon-trash" style="color:#f5f5f5;">      
+            </button> 
+                
+            </div>
+            </li>
+            
+               {{/each}}
+            
+            
+            
+        </ul>
+           
+            </div>
+            </div>
+       
+            
+            
+         <div class="uk-width-1-3 uk-width-small-1-1 uk-width-medium-1-3 uk-width-large-1-3 ">
+         <div class="uk-panel uk-panel-hover ">
+         
+         <h6 class="uk-panel-header uk-text-bottom">RESOURCE <a href="" style="color:#FFBF00;" data-uk-tooltip title="What key resources do our value propositions require ? <br> Our distribution channels ? <br> Customer relationships ? <br> Revenue Stream ? <br> <b> Types of Resources </b> <br> - Physical <br> - Intellectual (brand, copyrights, royalties, data-market) <br> - Human <br> - Financial "><i class="fa fa-info-circle" aria-hidden="true"></i>
+</a></h6><hr> 
+         
+         
+         <p><button class="uk-button uk-icon-plus uk-button-primary" style="color:#f5f5f5;" data-uk-modal="{target:'#create-businesscanvas-resource', center:true}"> <i class="fa fa-sticky-note" aria-hidden="true"></i>
+</button></p> 
+            
+            
+           
+        <ul class="uk-list uk-list-space uk-sortable" style="list-style-type: none;background:#c3d5ce;"  data-uk-sortable="{handleClass:'uk-sortable-handle', group:'list-sorting'}">
+           
+           
+           
+              {{#each key_resources}}
+            
+            <li class="uk-width-1-1" style="font-size: 12px;background:#ffe699;">
+            <div class="uk-panel">
+            
+            <p class="uk-panel-title uk-width-1-1 uk-sortable-handle" style="font-size: 12px;"><i class="uk-icon-arrows" ></i></p>
+                       {{pin}}
+                <br><br>
+<button href="#" class="delete-pin-kr uk-button-danger uk-button-small uk-width-1-1 uk-icon-trash" style="color:#f5f5f5;">      
+            </button> 
+                
+            </div>
+            </li>
+            
+               {{/each}}
+            
+            
+            
+        </ul>
+           
+            </div>
+            </div>
+           
+        
+</div> <!-- end of infastructure UK-grid section --> 
+</div> <!-- end of infastructure UK-BLOCK section --> 
+        
+    <div class="uk-width-1-3 uk-width-small-1-1 uk-width-medium-1-3 uk-width-large-1-3" style="background-color:#77749C;min-height: 400px;">    <h4 class="uk-text-contrast uk-text-center uk-margin-top uk-text-bold">OFFERING <a href="" style="color:#FFBF00;" data-uk-tooltip title="The general exchange, trade, procurement and/or deliverable of your business model."><i class="fa fa-info-circle" aria-hidden="true"></i>
+</a></h4><hr>
+        
+        <div class="uk-grid uk-grid-small">
+        
+        <div class="uk-width-1-1 uk-width-small-1-1 uk-width-medium-1-1 uk-width-large-1-1">
+            <div class="uk-panel uk-panel-hover ">
+                <h6 class="uk-panel-header uk-text-bottom">VALUE PROPOSITIONs <a href="" style="color:#FFBF00;" data-uk-tooltip title="What value do we deliver to the customer ? <br> Which one of our customer's problems are we helping to solve ? <br> What bundles of products and services are we offering to each Customer Segment ? <br> Which customer needs are we satisfying ? <br> <b> Characteristics </b> <br> - Newness <br> - Performance <br> - Customization <br> - 'Getting the Job Done !' <br> - Design <br> - Brand/Status <br> - Price <br> - Cost Reduction <br> - Risk Reduction <br> - Accessibility <br> -Convenience/Usability "><i class="fa fa-info-circle" aria-hidden="true"></i>
+</a></h6><hr> 
+                
+                <p><button class="uk-button uk-icon-plus uk-button-primary" style="color:#f5f5f5;" data-uk-modal="{target:'#create-businesscanvas-value', center:true}"> <i class="fa fa-sticky-note" aria-hidden="true"></i>
+</button></p> 
+            
+            
+           
+        <ul class="uk-list uk-list-space uk-sortable" style=" list-style-type: none;background:#c5c3d5;display: inline;"  data-uk-sortable="{handleClass:'uk-sortable-handle', group:'list-sorting'}">
+           
+           <!-- Use uk-column-1-2 with paragraph to set cards --> 
+          
+              {{#each value_proposition}}
+                              
+            <li class="width-1-2" style="font-size: 12px;background:#ffe699;">
+            
+                <div class="uk-panel">
+            
+            <p class="uk-panel-title uk-width-1-1 uk-sortable-handle" style="font-size: 12px;"><i class="uk-icon-arrows" ></i></p>
+                    
+                  {{pin}}
+                    
+                    
+                    
+                <br><br>
+<button href="#" class="delete-pin-vp uk-button-danger uk-button-small uk-width-1-1 uk-icon-trash" style="color:#f5f5f5;">      
+            </button> 
+                
+            </div>
+                
+                
+                
+            </li> 
+            
+               {{/each}}
+             
+            
+            
+        </ul>
+           
+            </div>
+            </div>
+            
+            
+         
+        </div> <!-- end of offering UK-grid section --> 
+        </div> <!-- end of offering section -->
+            
+            
+        
+    <div class="uk-width-1-3 uk-width-small-1-1 uk-width-medium-1-3 uk-width-large-1-3" style="background-color:#BF9B30;min-height: 400px;"> 
+        <h4 class="uk-text-contrast uk-text-center uk-margin-top uk-text-bold">CUSTOMER <a href="" style="color:#FFBF00;" data-uk-tooltip title="The buyers, consumers and end-users of your business model. "><i class="fa fa-info-circle" aria-hidden="true"></i>
+
+            </a>
+        </h4>
+        
+        <hr>
+        
+        <div class="uk-grid uk-grid-small">
+        
+         <div class="uk-width-1-3 uk-width-small-1-1 uk-width-medium-1-3 uk-width-large-1-3">
+             
+             <div class="uk-panel uk-panel-hover ">
+                 
+                 <h6 class="uk-panel-header uk-text-bottom">CHANNEL <a href="" style="color:#FFBF00;" data-uk-tooltip title="Through which channels do our customer segments want to be reached ? <br> How are we reaching them now ? <br> How are our channels integrated ? <br> Which ones work best ? <br> Which ones are the most cost-efficient ? <br> How are weintegrating them with customer routines ? <br> <b> Channel Phases: </b> <br> 1) Awareness <br> - How do we raise awareness about our company's products and services ? <br> 2) Evaluation <br> - How do we help customers evaluate our organizations' value proposition ? <br> 3) Purchase <br> - How do we allow customers to purchase specific products and services ? <br> 4) Delivery <br> - How do we deliver a value proposition to customers ? <br> 5) After sale <br> - How do we provide post-purchase customer support ? "><i class="fa fa-info-circle" aria-hidden="true"></i>
+</a></h6><hr> 
+                 
+                 <p><button class="uk-button uk-icon-plus uk-button-primary" style="color:#f5f5f5;" data-uk-modal="{target:'#create-businesscanvas-channel', center:true}"> <i class="fa fa-sticky-note" aria-hidden="true"></i>
+</button></p> 
+            
+            
+           
+        <ul class="uk-list uk-list-space uk-sortable" style="list-style-type: none;background:#fff2cc;"  data-uk-sortable="{handleClass:'uk-sortable-handle', group:'list-sorting'}">
+           
+           
+           
+              {{#each customer_channel}}
+            
+            <li class="uk-width-1-1" style="font-size: 12px;background:#ffe699;">
+            <div class="uk-panel">
+            
+            <p class="uk-panel-title uk-width-1-1 uk-sortable-handle" style="font-size: 12px;"><i class="uk-icon-arrows" ></i></p>
+                       {{pin}}
+                <br><br>
+<button href="#" class="delete-pin-cc uk-button-danger uk-button-small uk-width-1-1 uk-icon-trash" style="color:#f5f5f5;">      
+            </button> 
+                
+            </div>
+            </li>
+            
+               {{/each}}
+            
+            
+            
+        </ul>
+           
+            </div>
+            </div>
+            
+            
+         
+        
+            
+            
+    <div class="uk-width-1-3 uk-width-small-1-1 uk-width-medium-1-3 uk-width-large-1-3"
+         
+         ><div class="uk-panel uk-panel-hover ">
+        
+        <h6 class="uk-panel-header uk-text-bottom">RELATIONSHIP  <a href="" style="color:#FFBF00;" data-uk-tooltip title="What type of relationship does each of our customer segments expect us to establish and maintain with them ? <br> Which ones have we established ? <br> How are they integrated with the rest of our business model ? <br> How costly are they ? <br> <b> Examples </b> - Personal Assistance <br> - Dedicated VIP Assistance <br> - Self-Service <br> - Automated Services <br> - Communities <br> - Co-creation"><i class="fa fa-info-circle" aria-hidden="true"></i>
+</a></h6><hr> 
+        
+        <p><button class="uk-button uk-icon-plus uk-button-primary" style="color:#f5f5f5;" data-uk-modal="{target:'#create-businesscanvas-relationship', center:true}"> <i class="fa fa-sticky-note" aria-hidden="true"></i>
+</button></p> 
+            
+            
+           
+        <ul class="uk-list uk-list-space uk-sortable" style="list-style-type: none;background:#fff2cc;"  data-uk-sortable="{handleClass:'uk-sortable-handle', group:'list-sorting'}">
+           
+           
+           
+              {{#each customer_relationship}}
+            
+            <li class="uk-width-1-1" style="font-size: 12px;background:#ffe699;">
+            <div class="uk-panel">
+            
+            <p class="uk-panel-title uk-width-1-1 uk-sortable-handle" style="font-size: 12px;"><i class="uk-icon-arrows" ></i></p>
+                       {{pin}}
+                <br><br>
+<button href="#" class="delete-pin-cr uk-button-danger uk-button-small uk-width-1-1 uk-icon-trash" style="color:#f5f5f5;">      
+            </button> 
+                
+            </div>
+            </li>
+            
+               {{/each}}
+            
+            
+            
+        </ul>
+           
+            </div>
+            </div>  
+            
+            
+    <div class="uk-width-1-3 uk-width-small-1-1 uk-width-medium-1-3 uk-width-large-1-3">
+        
+        <div class="uk-panel uk-panel-hover ">
+            
+            <h6 class="uk-panel-header uk-text-bottom">SEGMENT <a href="" style="color:#FFBF00;" data-uk-tooltip title="For whom are we creating value ? <br> Who are our most important customers ? <br> <b> Examples </b> <br> - Mass Market <br> - Niche Market <br> - Segmented <br> - Diversified <br> - Multi-lateral/sided Platforms "><i class="fa fa-info-circle" aria-hidden="true"></i>
+</a></h6><hr> 
+            
+            <p><button class="uk-button uk-icon-plus uk-button-primary" style="color:#f5f5f5;" data-uk-modal="{target:'#create-businesscanvas-segement', center:true}"> <i class="fa fa-sticky-note" aria-hidden="true"></i>
+</button></p> 
+            
+            
+           
+        <ul class="uk-list uk-list-space uk-sortable" style="list-style-type: none;background:#fff2cc;"  data-uk-sortable="{handleClass:'uk-sortable-handle', group:'list-sorting'}">
+           
+           
+           
+              {{#each customer_segment}}
+            
+            <li class="uk-width-1-1" style="font-size: 12px;background:#ffe699;">
+            <div class="uk-panel">
+            
+            <p class="uk-panel-title uk-width-1-1 uk-sortable-handle" style="font-size: 12px;"><i class="uk-icon-arrows" ></i></p>
+                       {{pin}}
+                <br><br>
+<button href="#" class="delete-pin-cs uk-button-danger uk-button-small uk-width-1-1 uk-icon-trash" style="color:#f5f5f5;">      
+            </button> 
+                
+            </div>
+            </li>
+            
+               {{/each}}
+            
+            
+            
+        </ul>
+           
+            </div>
+            </div>
+        
+</div> <!-- end of customer UK-grid section --> 
+    </div> <!-- end of customer col section --> 
+   
+
+  <div class="uk-width-1-1 uk-width-small-1-1 uk-width-medium-1-1 uk-width-large-1-1" style="background-color:#5C7880;min-height:25px;" >  
+       
+        <h4 class=" uk-text-center uk-text-bottom uk-margin-top uk-text-bold">FINANCIAL 
+            <a href="" style="color:#FFBF00;" data-uk-tooltip title="The purchasing and cost-retaining attributes of your business model.">
+                <i class="fa fa-info-circle" aria-hidden="true"></i>
+            </a>
+        </h4>
+     
+    </div> 
+     
+        
+    <div class="uk-width-1-2 uk-width-small-1-1 uk-width-medium-1-2 uk-width-large-1-2" style="background-color:#B6D1C6;min-height: 350px;">
+        
+        <div class="uk-panel uk-panel-hover ">
+            <h5 class="uk-panel-header uk-text-bottom uk-vertical-align-bottom">REVENUE STREAM 
+                <a href="" style="color:#FFBF00;" data-uk-tooltip title="For what value are our customers really willing to pay ? <br> For what do they currently pay ? <br> How are they currently paying ? <br> What would they prefer to pay for ? <br> How much does each revenue stream contribute to the overall renvenues ? <br> <b> Types: </b> <br> - Asset sale <br> - Usage fee <br> - Subscription fees <br> - Lending/Renting/Leasing <br> - Licensing <br> - Brokerage fee <br> - Advertising <br> <b> Fixed Pricing </b> <br> - List Pricing <br> - Feature Dependency <br> Customer segment dependency <br> - Volume dependency <br> <b> Dynamic Pricing </b> <br> - Bargaining <br> - Yield management <br> - Real-time-market <br> - Data-Accessibility ">
+                <i class="fa fa-info-circle" aria-hidden="true"></i>
+                 </a>
+            </h5>
+            
+            <hr> 
+            
+            <p>
+                <button class="uk-button uk-icon-plus uk-button-primary" style="color:#f5f5f5;" data-uk-modal="{target:'#create-businesscanvas-stream', center:true}"> 
+                <i class="fa fa-sticky-note" aria-hidden="true"></i>
+                </button>
+            </p> 
+            
+            
+           
+        <ul class="uk-list uk-list-space uk-sortable" style="list-style-type: none;background:#eff5f3;"  data-uk-sortable="{handleClass:'uk-sortable-handle', group:'list-sorting'}">
+           
+           {{#each financial_stream}}
+            
+            <li class="uk-width-1-1" style="font-size: 12px;background:#ffe699;">
+            <div class="uk-panel">
+            
+            <p class="uk-panel-title uk-width-1-1 uk-sortable-handle" style="font-size: 12px;"><i class="uk-icon-arrows" ></i></p>
+                       {{pin}}
+                <br><br>
+<button href="#" class="delete-pin-fs uk-button-danger uk-button-small uk-width-1-1 uk-icon-trash" style="color:#f5f5f5;">      
+            </button> 
+                
+            </div>
+            </li>
+            
+               {{/each}}
+            
+            
+            
+        </ul>
+           
+            </div>
+            </div>
+            
+            
+         
+        
+        
+        
+    <div class="uk-width-1-2 uk-width-small-1-1 uk-width-medium-1-2 uk-width-large-1-2" style="background-color:#B6D1C6;min-height: 350px;">
+       
+        
+        <div class="uk-panel uk-panel-hover ">
+            
+            <h5 class="uk-panel-header uk-text-bottom uk-vertical-align-bottom">COST SEGMENT 
+                <a href="" style="color:#FFBF00;" data-uk-tooltip title="What are the most important costs inherent in our business model ? <br> Which key resources are most expensive ? <br> Which key activities are most expensive ? <br> What strategies are in place for staging your finances ? <br> How do they integrate with your price production plans ? <br> <b> Is your business more </b> <br> COST DRIVEN : lean, low price value proportions, maximum automation, extensive outsourcing? <br> VALUE DRIVEN : focused on value creation, premium value proportions, industry driven, reputible, integrity <br> <b> Sample Characteristics: </b> - Fixed Costs (salaries, rent, utilities) <br> - Variable costs <br> - Economics of scale <br> - Economics of exchange-rate <br> - Economics of scope ">
+                <i class="fa fa-info-circle" aria-hidden="true"></i>
+                </a>
+            </h5>
+            
+            <hr> 
+            
+            <p>
+                <button class="uk-button uk-icon-plus uk-button-primary" style="color:#f5f5f5;" data-uk-modal="{target:'#create-businesscanvas-fsegement', center:true}"> 
+                <i class="fa fa-sticky-note" aria-hidden="true"></i>
+                </button>
+            </p> 
+            
+            
+           
+        <ul class="uk-list uk-list-space uk-sortable" style="list-style-type: none;background:#eff5f3;"  data-uk-sortable="{handleClass:'uk-sortable-handle', group:'list-sorting'}">
+           
+           
+           
+              {{#each financial_segement}}
+            
+            <li class="uk-width-1-1" style="font-size: 12px;background:#ffe699;">
+            <div class="uk-panel">
+            
+            <p class="uk-panel-title uk-width-1-1 uk-sortable-handle" style="font-size: 12px;"><i class="uk-icon-arrows" ></i></p>
+                       {{pin}}
+                <br><br>
+<button href="#" class="delete-pin-fcs uk-button-danger uk-button-small uk-width-1-1 uk-icon-trash" style="color:#f5f5f5;">      
+            </button> 
+                
+            </div>
+            </li>
+            
+               {{/each}}
+            
+            
+            
+        </ul>
+           
+            </div>
+            </div>
+            
+            
+   
+    
+</div> <!-- end of GRID 1-1 --> 
+    
+    
+    </div>   <!-- END CANVAS GRID MATCH WIDTH COL--> 
+                
+               
+    </div> <!-- END CANVAS PAGE RESPONSIVE WIDTH --> 
+     
+    
+</template>
+
