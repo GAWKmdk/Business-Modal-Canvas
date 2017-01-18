@@ -8,14 +8,14 @@
 **** Built on the UIKIT package. 
 
 
- Future Updates/Plan (Note these features have the layout built-on but are not functioning) :
+ * Future Updates/Plan (Note these features have the layout built-on but are not functioning) :
 
 
-** Sharper CSS with cards/shadow
-** Share the URL.
-** Print/Download as a PDF
-** Clean Canvas - Reset
-** User Login and Role Management
+* Sharper CSS with cards/shadow
+* Share the URL.
+* Print/Download as a PDF
+* Clean Canvas - Reset
+* User Login and Role Management
 
 # MIT LICENSE
 
