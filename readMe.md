@@ -5,11 +5,9 @@
 ![businesscanvas2](https://cloud.githubusercontent.com/assets/23016977/21630590/b92a1554-d22a-11e6-8d22-d2d86d90310a.jpg)
 ![businesscanvas](https://cloud.githubusercontent.com/assets/23016977/21630591/ba9a9076-d22a-11e6-93ec-b07645fa8e10.jpg)
 
-**** Built on the UIKIT package. 
+- Built on the UIKIT package. 
 
-
- * Future Updates/Plan (Note these features have the layout built-on but are not functioning) :
-
+ - Future Updates/Plan (Note these features have the layout built-on but are not functioning) :
 
 * Sharper CSS with cards/shadow
 * Share the URL.
