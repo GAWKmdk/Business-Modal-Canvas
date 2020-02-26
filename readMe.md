@@ -7,13 +7,14 @@
 
 - Built on the UIKIT package. 
 
- - Future Updates/Plan (Note these features have the layout built-on but are not functioning) :
 
 * Sharper CSS with cards/shadow
-* Share the URL.
-* Print/Download as a PDF
-* Clean Canvas - Reset
-* User Login and Role Management
+* Share the URL. (ADDED)
+* Print/Download as a PDF (ADDED)
+* Clean Canvas - Reset (ADDED)
+* User Login and Role Management (REMOVED IDEA)
+
+ADDED Tutorial.jS tutorial. 
 
 # MIT LICENSE
 
