@@ -1,0 +1,4 @@
+# ddp@1.2.5
+# ddp-client@1.2.9
+# ddp-common@1.2.8
+# ddp-server@1.2.10

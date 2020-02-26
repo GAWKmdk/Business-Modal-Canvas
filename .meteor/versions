@@ -1,4 +1,5 @@
 allow-deny@1.0.5
+aramix:introjs@2.2.6
 autopublish@1.0.7
 autoupdate@1.2.11
 babel-compiler@6.13.0
@@ -42,7 +43,6 @@ iron:middleware-stack@1.1.0
 iron:router@1.0.13
 iron:url@1.0.11
 jquery@1.11.10
-json@1.0.3
 launch-screen@1.0.12
 livedata@1.0.18
 logging@1.1.16
@@ -58,6 +58,8 @@ modules@0.7.7
 modules-runtime@0.7.7
 mongo@1.1.14
 mongo-id@1.0.6
+mrt:filesaver@0.0.3
+new3rs:html2canvas@0.0.5
 npm-mongo@2.2.11_2
 observe-sequence@1.0.14
 ordered-dict@1.0.9

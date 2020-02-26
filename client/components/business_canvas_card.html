@@ -1,6 +1,6 @@
 <template name="business_canvas_card">
     
-<div class=" uk-text-center uk-margin-left uk-margin-right">
+<div id="documentframe" class=" uk-text-center uk-margin-left uk-margin-right">
     
     
     <!-- TOOL TIP SECTION --> 
@@ -9,10 +9,20 @@
             <a href="" class="uk-alert-close uk-close"></a>
      
         <p><i class="fa fa-life-ring" aria-hidden="true"> </i>
-            <b> TIP: </b>
-To indicate a message containing information for first time users. <br>Ex. After you have created pins, you can rearrange them accordingly by click on the pins' <b>
-            <i class="fa fa-arrows" aria-hidden="true"></i></b> icon ! </p>
+            <b> ATTENTION: </b>To send your FEEDBACK, BUGS and/or SUGGESTIONS, please email us @ SLMINQUIRES@GMAIL.COM 
+         </p>
+        </div>
+    
+     
+       
+    <!-- TUTORIAL BIT --> 
+    <div class="uk-alert uk-alert-success" data-uk-alert>
+            <a href="" class="uk-alert-close uk-close"></a>
+        <p><a href="javascript:void(0);" onclick="javascript:introJs().setOption('showProgress', true).start();"><b>CLICK HERE</b> </a> TO BEGIN THE PAGE TUTORIAL !
+            </p>
 </div>
+    
+    
     
   <br><br>
     
@@ -20,22 +30,41 @@ To indicate a message containing information for first time users. <br>Ex. After
      <!-- BREADCRUMB SECTION --> 
         <div class="uk-width-1-2">
         <div class="uk-panel">
+            
+            <!-- Tutorial 7 -->
+            <div data-step="7" data-intro="<p>UX Business Canvas is very simple to use. Simply click the green plus sheet button to generate a pin; fill-out the details in the pin form before clicking create and a pin will automatically be generated under the column of your selection.</p>&nbsp;
+    <p>If you feel like re-arranging your pin(s) simply drag-and-drop the pin by clicking on the <b>arrow-movement icon and moving the pin to a grey column area denoted by -Drop Pin Here-. You can arrange pins by rank by moving them vertically in click-order. </p>&nbsp;
+    <p>If you wish to delete a pin, simply click the red garbage can button.&nbsp;</p>" data-position='bottom' ></div>
+                
+            
          <!-- SECTION PANEL HEADER -->      
-            <h3 class="uk-panel-title uk-text-bold uk-text-large">BUSINESS CANVAS MODEL</h3>
+            <h3 class="tut1 uk-panel-title uk-text-bold uk-text-large" data-step="1" data-position="bottom" data-intro="<p>
+    <b>UX Business Canvas</b> is a strategic content management and <b>lean startup tool</b> for templating and developing business information models at the beginning stages of developing a business product and/or service plan. 
+    &nbsp;
+    It assists researcher in <b>aligning</b> their <b>business activities</b> by illustrating element activities, <b>niches</b> and <b>trade-offs</b>. 
+     &nbsp;   
+    A business canvas can be used and adapted to suit specific business scenarios and applications including, <b>product / market fit</b>, <b>supply chain development</b>, <b>cash flow development</b>, <b>internal communications</b> and <b>lean startup frameworking</b>. 
+    </p>" >BUSINESS CANVAS MODEL</h3>
+            <div></div>
         </div> 
         </div>
     
 
 
         <!-- SECTION SETTINGS/SHARE BUTTONS --> 
-   <div class="uk-align-right" data-uk-sticky="{bottom:100}">
+   <div class="tut8 uk-align-right" data-uk-sticky="{bottom:100}" >
        
-       <button class="uk-button uk-icon-print" type="button">
+       <button id="buttonprintscreen" class="buttonprintscreen uk-button uk-icon-print" type="button" data-step="10" data-intro="<p>If you would like to print your business canvas, click here ! </p> " data-position='left'>
         </button>
-       <button class="uk-button uk-icon-file-pdf-o" type="button">
+       
+       <button class="buttonsaveaspng uk-button uk-icon-camera" type="button" data-step="11" data-intro="<p>If you would like to download your work as a .png image, click here ! </p> " data-position='left'>
         </button>
-       <button class="uk-button uk-icon-share-alt" type="button">
+       
+       <button class="buttonshareurl uk-button uk-icon-share-alt" type="button" data-step="12" data-intro="<p>Congratulations, you are now ready to use UX Business Canvas ! &nbsp;
+    If you'd like to share the url on your local network using the clipboard feature, please click here</p> " data-position='left'>
         </button>
+       
+       
     
     </div>  
     
@@ -45,8 +74,20 @@ To indicate a message containing information for first time users. <br>Ex. After
     <br>
     <br>
 
+    <div class="capture" >
+        
+    <!-- TUTORIAL SECTION --> 
+    
+    <!-- {{#if tutorialEnabled}}
+    {{> tutorial options}}
+    {{/if}}  -->  
+        
+    
+        
     <!-- MODEL SECTION --> 
     {{>business_canvas_page}}
+    </div>
+    
     
     </div>
 
@@ -101,7 +142,7 @@ To indicate a message containing information for first time users. <br>Ex. After
         <div class="uk-modal-content">
         <form class="uk-form">
         <fieldset data-uk-margin>
-        <legend>Create a New Infastructure - Activity Pin</legend>
+        <legend>Create a New Infrastructure - Activity Pin</legend>
         
              <textarea cols="" rows="" placeholder="Description of Pin" name="infastructure-activity" ></textarea>
             
@@ -130,7 +171,7 @@ To indicate a message containing information for first time users. <br>Ex. After
         <div class="uk-modal-content">
         <form class="uk-form">
         <fieldset data-uk-margin>
-        <legend>Create a New Infastructure - Resource Pin</legend>
+        <legend>Create a New Infrastructure - Resource Pin</legend>
         
              <textarea cols="" rows="" placeholder="Description of Pin" name="infastructure-resource" ></textarea>
             
@@ -325,8 +366,8 @@ To indicate a message containing information for first time users. <br>Ex. After
         
 <br>
         
-<div class="uk-width-1-3 uk-width-small-1-1 uk-width-medium-1-3 uk-width-large-1-3" style="background-color:#749C8C;min-height:500px;">   
-    <h4 class="uk-text-contrast uk-text-center uk-margin-top uk-text-bold">INFASTRUCTURE 
+<div class="uk-width-1-3 uk-width-small-1-1 uk-width-medium-1-3 uk-width-large-1-3" style="background-color:#749C8C;min-height:500px;" data-step="2" data-intro="<p>These are the key-noted referential product and service innovation(s) and management key-terms for inducting customer acquistion, rentention and source-innovation installations. </p>" data-position='right'>   
+    <h4 class="tut2 uk-text-contrast uk-text-center uk-margin-top uk-text-bold">INFRASTRUCTURE 
         <a href="" style="color:#FFBF00;" data-uk-tooltip title="The foundation and framework solutions of your business model.">
             <i class="fa fa-info-circle"  aria-hidden="true"></i>
         </a>
@@ -346,14 +387,14 @@ To indicate a message containing information for first time users. <br>Ex. After
         <hr> 
             
             <p>
-                <button class="uk-button uk-icon-plus uk-button-primary" style="color:#f5f5f5;" data-uk-modal="{target:'#create-businesscanvas-partner', center:true}"> 
+                <button class="tut7 uk-button uk-icon-plus uk-button-primary" style="color:#f5f5f5;" data-uk-modal="{target:'#create-businesscanvas-partner', center:true}" data-step="7" data-intro="<p>UX Business Canvas is very simple to use. Simply click the green plus sheet button to generate a pin; fill-out the details in the pin form before clicking create and a pin will automatically be generated under the column of your selection.</p>&nbsp;</p>" data-position='right'> 
                     <i class="fa fa-sticky-note" aria-hidden="true"></i>
                 </button>
             </p> 
             
             
            
-        <ul class="uk-list uk-list-space uk-sortable" style="list-style-type: none;background:#c3d5ce;"  data-uk-sortable="{handleClass:'uk-sortable-handle', group:'list-sorting'}">
+        <ul class="uk-list uk-list-space uk-sortable" style="list-style-type: none;background:#c3d5ce;padding-bottom: 10px;"  data-uk-sortable="{handleClass:'uk-sortable-handle', group:'list-sorting'}"><sub>Drop Pin Here</sub><br>
            
            
            
@@ -362,10 +403,10 @@ To indicate a message containing information for first time users. <br>Ex. After
             <li class="uk-width-1-1" style="font-size: 12px;background:#ffe699;">
             <div class="uk-panel">
             
-            <p class="uk-panel-title uk-width-1-1 uk-sortable-handle" style="font-size: 12px;"><i class="uk-icon-arrows" ></i></p>
+            <p class="uk-panel-title uk-width-1-1 uk-sortable-handle" style="font-size: 12px;" data-step="8" data-intro="<p>If you feel like re-arranging your pin(s) simply drag-and-drop the pin by clicking on the <b>arrow-movement icon</b> and moving the pin to a grey column area denoted by -Drop Pin Here-. You can arrange pins by rank by moving them vertically in click-order. </p>" data-position='right'><i class="uk-icon-arrows" ></i></p>
                        {{pin}}
                 <br><br>
-<button href="#" class="delete-pin-kp uk-button-danger uk-button-small uk-width-1-1 uk-icon-trash" style="color:#f5f5f5;">      
+<button href="#" class="delete-pin-kp uk-button-danger uk-button-small uk-width-1-1 uk-icon-trash" style="color:#f5f5f5;" data-step="9" data-intro="<p>If you wish to delete a pin, simply click the red garbage can button.&nbsp;</p>" data-position='right'>      
             </button> 
                 
             </div>
@@ -399,7 +440,7 @@ To indicate a message containing information for first time users. <br>Ex. After
         </p> 
                     
            
-        <ul class="uk-list uk-list-space uk-sortable" style="list-style-type: none;background:#c3d5ce;"  data-uk-sortable="{handleClass:'uk-sortable-handle', group:'list-sorting'}">
+        <ul class="uk-list uk-list-space uk-sortable" style="list-style-type: none;background:#c3d5ce;padding-bottom: 10px;"  data-uk-sortable="{handleClass:'uk-sortable-handle', group:'list-sorting'}"><sub>Drop Pin Here</sub><br>
            
            
            
@@ -440,7 +481,7 @@ To indicate a message containing information for first time users. <br>Ex. After
             
             
            
-        <ul class="uk-list uk-list-space uk-sortable" style="list-style-type: none;background:#c3d5ce;"  data-uk-sortable="{handleClass:'uk-sortable-handle', group:'list-sorting'}">
+        <ul class="uk-list uk-list-space uk-sortable" style="list-style-type: none;background:#c3d5ce;padding-bottom: 10px;"  data-uk-sortable="{handleClass:'uk-sortable-handle', group:'list-sorting'}"><sub>Drop Pin Here</sub><br>
            
            
            
@@ -471,7 +512,7 @@ To indicate a message containing information for first time users. <br>Ex. After
 </div> <!-- end of infastructure UK-grid section --> 
 </div> <!-- end of infastructure UK-BLOCK section --> 
         
-    <div class="uk-width-1-3 uk-width-small-1-1 uk-width-medium-1-3 uk-width-large-1-3" style="background-color:#77749C;min-height: 400px;">    <h4 class="uk-text-contrast uk-text-center uk-margin-top uk-text-bold">OFFERING <a href="" style="color:#FFBF00;" data-uk-tooltip title="The general exchange, trade, procurement and/or deliverable of your business model."><i class="fa fa-info-circle" aria-hidden="true"></i>
+    <div class="tut3 uk-width-1-3 uk-width-small-1-1 uk-width-medium-1-3 uk-width-large-1-3" style="background-color:#77749C;min-height: 400px;" data-step="3" data-intro="<p>This is the key-noted value propsition, or put simply what the business modal orientates for highly servicable goods and services.</p>" data-position='right'>    <h4 class="uk-text-contrast uk-text-center uk-margin-top uk-text-bold">OFFERING <a href="" style="color:#FFBF00;" data-uk-tooltip title="The general exchange, trade, procurement and/or deliverable of your business model."><i class="fa fa-info-circle" aria-hidden="true"></i>
 </a></h4><hr>
         
         <div class="uk-grid uk-grid-small">
@@ -485,8 +526,9 @@ To indicate a message containing information for first time users. <br>Ex. After
 </button></p> 
             
             
-           
-        <ul class="uk-list uk-list-space uk-sortable" style=" list-style-type: none;background:#c5c3d5;display: inline;"  data-uk-sortable="{handleClass:'uk-sortable-handle', group:'list-sorting'}">
+         
+
+        <ul class="uk-list uk-list-space uk-sortable" style=" list-style-type: none;background:#c5c3d5;padding-bottom: 10px;"  data-uk-sortable="{handleClass:'uk-sortable-handle', group:'list-sorting'}"><sub>Drop Pin Here</sub><br>
            
            <!-- Use uk-column-1-2 with paragraph to set cards --> 
           
@@ -528,7 +570,7 @@ To indicate a message containing information for first time users. <br>Ex. After
             
             
         
-    <div class="uk-width-1-3 uk-width-small-1-1 uk-width-medium-1-3 uk-width-large-1-3" style="background-color:#BF9B30;min-height: 400px;"> 
+    <div class="tut4 uk-width-1-3 uk-width-small-1-1 uk-width-medium-1-3 uk-width-large-1-3" style="background-color:#BF9B30;min-height: 400px;" data-step="4" data-intro="<p>These are the key-noted managements of communication, including key-termed relationship patterns, segmentation targets and channel funnels.</p>" data-position='left'> 
         <h4 class="uk-text-contrast uk-text-center uk-margin-top uk-text-bold">CUSTOMER <a href="" style="color:#FFBF00;" data-uk-tooltip title="The buyers, consumers and end-users of your business model. "><i class="fa fa-info-circle" aria-hidden="true"></i>
 
             </a>
@@ -550,7 +592,7 @@ To indicate a message containing information for first time users. <br>Ex. After
             
             
            
-        <ul class="uk-list uk-list-space uk-sortable" style="list-style-type: none;background:#fff2cc;"  data-uk-sortable="{handleClass:'uk-sortable-handle', group:'list-sorting'}">
+        <ul class="uk-list uk-list-space uk-sortable" style="list-style-type: none;background:#fff2cc;padding-bottom: 10px;"  data-uk-sortable="{handleClass:'uk-sortable-handle', group:'list-sorting'}"><sub>Drop Pin Here</sub><br>
            
            
            
@@ -594,7 +636,7 @@ To indicate a message containing information for first time users. <br>Ex. After
             
             
            
-        <ul class="uk-list uk-list-space uk-sortable" style="list-style-type: none;background:#fff2cc;"  data-uk-sortable="{handleClass:'uk-sortable-handle', group:'list-sorting'}">
+        <ul class="uk-list uk-list-space uk-sortable" style="list-style-type: none;background:#fff2cc;padding-bottom: 10px;"  data-uk-sortable="{handleClass:'uk-sortable-handle', group:'list-sorting'}"><sub>Drop Pin Here</sub><br>
            
            
            
@@ -634,7 +676,7 @@ To indicate a message containing information for first time users. <br>Ex. After
             
             
            
-        <ul class="uk-list uk-list-space uk-sortable" style="list-style-type: none;background:#fff2cc;"  data-uk-sortable="{handleClass:'uk-sortable-handle', group:'list-sorting'}">
+        <ul class="uk-list uk-list-space uk-sortable" style="list-style-type: none;background:#fff2cc;padding-bottom: 10px;"  data-uk-sortable="{handleClass:'uk-sortable-handle', group:'list-sorting'}"><sub>Drop Pin Here</sub><br>
            
            
            
@@ -665,7 +707,7 @@ To indicate a message containing information for first time users. <br>Ex. After
     </div> <!-- end of customer col section --> 
    
 
-  <div class="uk-width-1-1 uk-width-small-1-1 uk-width-medium-1-1 uk-width-large-1-1" style="background-color:#5C7880;min-height:25px;" >  
+  <div class="uk-width-1-1 uk-width-small-1-1 uk-width-medium-1-1 uk-width-large-1-1" style="background-color:#5C7880;min-height:25px;"  >  
        
         <h4 class=" uk-text-center uk-text-bottom uk-margin-top uk-text-bold">FINANCIAL 
             <a href="" style="color:#FFBF00;" data-uk-tooltip title="The purchasing and cost-retaining attributes of your business model.">
@@ -676,7 +718,7 @@ To indicate a message containing information for first time users. <br>Ex. After
     </div> 
      
         
-    <div class="uk-width-1-2 uk-width-small-1-1 uk-width-medium-1-2 uk-width-large-1-2" style="background-color:#B6D1C6;min-height: 350px;">
+    <div class="tut5 uk-width-1-2 uk-width-small-1-1 uk-width-medium-1-2 uk-width-large-1-2" style="background-color:#B6D1C6;min-height: 350px;" data-step="5" data-intro="<p>These are the key-worthy inductions for calculating the revenue generating structures.</p>" data-position='right'>
         
         <div class="uk-panel uk-panel-hover ">
             <h5 class="uk-panel-header uk-text-bottom uk-vertical-align-bottom">REVENUE STREAM 
@@ -695,7 +737,7 @@ To indicate a message containing information for first time users. <br>Ex. After
             
             
            
-        <ul class="uk-list uk-list-space uk-sortable" style="list-style-type: none;background:#eff5f3;"  data-uk-sortable="{handleClass:'uk-sortable-handle', group:'list-sorting'}">
+        <ul class="uk-list uk-list-space uk-sortable" style="list-style-type: none;background:#eff5f3;padding-bottom: 10px;"  data-uk-sortable="{handleClass:'uk-sortable-handle', group:'list-sorting'}"><sub>Drop Pin Here</sub><br>
            
            {{#each financial_stream}}
             
@@ -725,7 +767,9 @@ To indicate a message containing information for first time users. <br>Ex. After
         
         
         
-    <div class="uk-width-1-2 uk-width-small-1-1 uk-width-medium-1-2 uk-width-large-1-2" style="background-color:#B6D1C6;min-height: 350px;">
+    <div class="tut6 uk-width-1-2 uk-width-small-1-1 uk-width-medium-1-2 uk-width-large-1-2" style="background-color:#B6D1C6;min-height: 350px;" data-step="6" data-intro="<p>These are the key-worthy inductions for calculating the cost fixtures to doing business.</p>
+    
+    <p> Click NEXT to learn the simple features of this application to develop your business canvas ! </p>" data-position='left'>
        
         
         <div class="uk-panel uk-panel-hover ">
@@ -746,7 +790,7 @@ To indicate a message containing information for first time users. <br>Ex. After
             
             
            
-        <ul class="uk-list uk-list-space uk-sortable" style="list-style-type: none;background:#eff5f3;"  data-uk-sortable="{handleClass:'uk-sortable-handle', group:'list-sorting'}">
+        <ul class="uk-list uk-list-space uk-sortable" style="list-style-type: none;background:#eff5f3;padding-bottom: 10px;"  data-uk-sortable="{handleClass:'uk-sortable-handle', group:'list-sorting'}"><sub >Drop Pin Here</sub>
            
            
            
@@ -784,6 +828,6 @@ To indicate a message containing information for first time users. <br>Ex. After
                
     </div> <!-- END CANVAS PAGE RESPONSIVE WIDTH --> 
      
-    
+
 </template>
 

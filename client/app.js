@@ -4,5 +4,6 @@ import { ReactiveVar } from 'meteor/reactive-var';
 import './app.html';
 import './css/uikit.css';
 import './js/uikit.min.js';
+import './js/html2canvas.min.js';
 
 

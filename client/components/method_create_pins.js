@@ -1,5 +1,66 @@
 
-   
+   Template.business_canvas_card.events({
+       
+       
+         // print screen
+
+       'click .buttonprintscreen':
+       
+       function(event) {
+       window.print();
+       console.log("Printing Screen");
+       
+       Bert.alert( 'Printing.', 'success', 'fixed-top', 'fa-check' );
+  },
+       
+        // PDF Save
+
+       'click .buttonsaveaspng':
+       
+       function(event) {
+
+           html2canvas($("#documentframe"), {
+            onrendered: function(canvas) {
+                theCanvas = canvas;
+                document.body.appendChild(canvas);
+
+                canvas.toBlob(function(blob) {
+					saveAs(blob, "MyBusinessCanvas.png"); 
+				});
+                
+                //removes append from bottom of page - no spillage
+                document.body.removeChild(canvas);
+            }
+        });
+           
+              
+       console.log("Saving as PNG");
+       
+       Bert.alert( 'Saving format as PNG.', 'success', 'fixed-top', 'fa-check' );
+  },
+       
+        // Share/copy URL
+
+       'click .buttonshareurl':
+       
+       function(event) {
+        
+    var URL = window.location.href;
+       
+           console.log("Copying URL");
+       
+       Bert.alert( ' URL copied', 'success', 'fixed-top', 'fa-check' );
+           
+           document.execCommand("copy");    
+      
+           prompt("Copy to clipboard: Ctrl+C, Enter", URL);
+       
+           
+           
+  },
+                  
+   });
+
    
    
    Template.business_canvas_page.events({
@@ -10,7 +71,7 @@
         event.preventDefault();
         
        
-     
+       
         var infastructurepartner = $('[name="infastructure-partner"]').val(); //jquery
         
         Keypartners.insert({
@@ -419,7 +480,11 @@
         //clears input
         $('[name="offering-valueproposition"]').val('');
         
-    }
+    },
+       
+                               
+       
+   
     
     
     });
